@@ -7,18 +7,21 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		8906710029F1648900079D37 /* RocketsClient in Frameworks */ = {isa = PBXBuildFile; productRef = 890670FF29F1648900079D37 /* RocketsClient */; };
-		8906710429F164E000079D37 /* Infrastructure in Frameworks */ = {isa = PBXBuildFile; productRef = 8906710329F164E000079D37 /* Infrastructure */; };
 		8906712029F1810700079D37 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 8906711F29F1810700079D37 /* README.md */; };
-		8906712829F18FC400079D37 /* Features in Frameworks */ = {isa = PBXBuildFile; productRef = 8906712729F18FC400079D37 /* Features */; };
+		8906716329F3E0ED00079D37 /* RocketApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8906716229F3E0ED00079D37 /* RocketApp.swift */; };
+		8906716729F3E66100079D37 /* Assets in Resources */ = {isa = PBXBuildFile; fileRef = 8906716529F3E66100079D37 /* Assets */; };
+		8906716829F3E66100079D37 /* Screens in Resources */ = {isa = PBXBuildFile; fileRef = 8906716629F3E66100079D37 /* Screens */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		890670EA29F14D3100079D37 /* RocketApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RocketApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8906711F29F1810700079D37 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
-		8906712229F18EA200079D37 /* Features */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = Features; path = RocketApp/Features; sourceTree = "<group>"; };
-		8906712329F18EC100079D37 /* Infrastructure */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = Infrastructure; path = RocketApp/Infrastructure; sourceTree = "<group>"; };
-		8906712929F18FDB00079D37 /* Domain */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = Domain; path = RocketApp/Domain; sourceTree = "<group>"; };
+		8906712229F18EA200079D37 /* Feature */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = Feature; sourceTree = "<group>"; };
+		8906712329F18EC100079D37 /* Infrastructure */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = Infrastructure; sourceTree = "<group>"; };
+		8906712929F18FDB00079D37 /* Domain */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = Domain; sourceTree = "<group>"; };
+		8906716229F3E0ED00079D37 /* RocketApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RocketApp.swift; sourceTree = "<group>"; };
+		8906716529F3E66100079D37 /* Assets */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Assets; sourceTree = "<group>"; };
+		8906716629F3E66100079D37 /* Screens */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Screens; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -26,9 +29,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8906712829F18FC400079D37 /* Features in Frameworks */,
-				8906710029F1648900079D37 /* RocketsClient in Frameworks */,
-				8906710429F164E000079D37 /* Infrastructure in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -38,9 +38,8 @@
 		890670E129F14D3100079D37 = {
 			isa = PBXGroup;
 			children = (
-				8906712129F18EA200079D37 /* Packages */,
 				8906711F29F1810700079D37 /* README.md */,
-				890670EC29F14D3100079D37 /* RocketApp */,
+				890670EC29F14D3100079D37 /* App */,
 				890670EB29F14D3100079D37 /* Products */,
 				890670FE29F1648900079D37 /* Frameworks */,
 			);
@@ -54,11 +53,16 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		890670EC29F14D3100079D37 /* RocketApp */ = {
+		890670EC29F14D3100079D37 /* App */ = {
 			isa = PBXGroup;
 			children = (
+				8906716429F3E28C00079D37 /* Resources */,
+				8906712229F18EA200079D37 /* Feature */,
+				8906712329F18EC100079D37 /* Infrastructure */,
+				8906712929F18FDB00079D37 /* Domain */,
+				8906716229F3E0ED00079D37 /* RocketApp.swift */,
 			);
-			path = RocketApp;
+			path = App;
 			sourceTree = "<group>";
 		};
 		890670FE29F1648900079D37 /* Frameworks */ = {
@@ -68,14 +72,13 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		8906712129F18EA200079D37 /* Packages */ = {
+		8906716429F3E28C00079D37 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				8906712229F18EA200079D37 /* Features */,
-				8906712329F18EC100079D37 /* Infrastructure */,
-				8906712929F18FDB00079D37 /* Domain */,
+				8906716529F3E66100079D37 /* Assets */,
+				8906716629F3E66100079D37 /* Screens */,
 			);
-			name = Packages;
+			path = Resources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -95,9 +98,6 @@
 			);
 			name = RocketApp;
 			packageProductDependencies = (
-				890670FF29F1648900079D37 /* RocketsClient */,
-				8906710329F164E000079D37 /* Infrastructure */,
-				8906712729F18FC400079D37 /* Features */,
 			);
 			productName = RocketApp;
 			productReference = 890670EA29F14D3100079D37 /* RocketApp.app */;
@@ -115,6 +115,7 @@
 				TargetAttributes = {
 					890670E929F14D3100079D37 = {
 						CreatedOnToolsVersion = 14.2;
+						LastSwiftMigration = 1420;
 					};
 				};
 			};
@@ -141,7 +142,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8906716829F3E66100079D37 /* Screens in Resources */,
 				8906712029F1810700079D37 /* README.md in Resources */,
+				8906716729F3E66100079D37 /* Assets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -152,6 +155,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8906716329F3E0ED00079D37 /* RocketApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -277,6 +281,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "";
@@ -296,6 +301,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.crit.RocketApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -306,6 +312,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "";
@@ -352,21 +359,6 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
-
-/* Begin XCSwiftPackageProductDependency section */
-		890670FF29F1648900079D37 /* RocketsClient */ = {
-			isa = XCSwiftPackageProductDependency;
-			productName = RocketsClient;
-		};
-		8906710329F164E000079D37 /* Infrastructure */ = {
-			isa = XCSwiftPackageProductDependency;
-			productName = Infrastructure;
-		};
-		8906712729F18FC400079D37 /* Features */ = {
-			isa = XCSwiftPackageProductDependency;
-			productName = Features;
-		};
-/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 890670E229F14D3100079D37 /* Project object */;
 }
