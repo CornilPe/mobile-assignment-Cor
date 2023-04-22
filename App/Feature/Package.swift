@@ -4,7 +4,7 @@
 import PackageDescription
 
 let package = Package(
-    name: "Infrastructure",
+    name: "Feature",
     products: [
     ],
     dependencies: [
